@@ -87,7 +87,7 @@ const data = [
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
   },
   {
-    title: 'The Process of Learning',
+    title: 'The Process of Learning - "New Article"',
     date: 'July 14th, 2020',
     firstParagraph: `Be stubborn about your goals and flexible about your methods!  Be stubborn about your goals and flexible about your methods!Be stubborn about your goals and flexible about your methods!Be stubborn about your goals and flexible about your methods!
     Be stubborn about your goals and flexible about your methods!Be stubborn about your goals and flexible about your methods!Be stubborn about your goals and flexible about your methods!Be stubborn about your goals and flexible about your methods!
