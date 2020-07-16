@@ -102,6 +102,7 @@ const data = [
     Change is the end result of all true learning!Change is the end result of all true learning!`,
   }
 ];
+
 function createArticle (title, date, firstParagraph, secondParagraph, thirdParagraph){
   const divArticle = document.createElement("div");
   const titleArticle = document.createElement("h2");
@@ -130,7 +131,6 @@ function createArticle (title, date, firstParagraph, secondParagraph, thirdParag
   spanArticle.textContent = "\u25bc";
 
   spanArticle.addEventListener("click", event => {
-    console.log("button clicked", event.target);
     divArticle.classList.toggle("article-open");
   })
 
@@ -141,6 +141,7 @@ data.forEach(data => {
   articles.append(createArticle(data.title, data.date, data.firstParagraph, data.secondParagraph, data.thirdParagraph))
   console.log(data)
 })
+
 /* Step 1: Write a component called 'articleMaker' to create an article. You want your component to return markup like the template below: 
 
   <div class="article">
