@@ -104,37 +104,37 @@ const data = [
 ];
 
 function createArticle (title, date, firstParagraph, secondParagraph, thirdParagraph){
-  const divArticle = document.createElement("div");
-  const titleArticle = document.createElement("h2");
-  const dateArticle = document.createElement("p");
-  const firstPArticle = document.createElement("p");
-  const secondPArticle = document.createElement("p");
-  const thirdPArticle = document.createElement("p");
-  const spanArticle =  document.createElement("span");
+  const divArt = document.createElement("div");
+  const titleArt = document.createElement("h2");
+  const dateArt = document.createElement("p");
+  const firstParaArt = document.createElement("p");
+  const secondParaArt = document.createElement("p");
+  const thirdParaArt = document.createElement("p");
+  const spanArt =  document.createElement("span");
 
-  divArticle.append(titleArticle);
-  divArticle.append(dateArticle);
-  divArticle.append(firstPArticle);
-  divArticle.append(secondPArticle);
-  divArticle.append(thirdPArticle);
-  divArticle.append(spanArticle);
+  divArt.append(titleArt);
+  divArt.append(dateArt);
+  divArt.append(firstParaArt);
+  divArt.append(secondParaArt);
+  divArt.append(thirdParaArt);
+  divArt.append(spanArt);
 
-  divArticle.classList.add("article");
-  dateArticle.classList.add("date");
-  spanArticle.classList.add("expandButton");
+  divArt.classList.add("article");
+  dateArt.classList.add("date");
+  spanArt.classList.add("expandButton");
 
-  titleArticle.textContent = title;
-  dateArticle.textContent = date;
-  firstPArticle.textContent = firstParagraph;
-  secondPArticle.textContent = secondParagraph;
-  thirdPArticle.textContent = thirdParagraph;
-  spanArticle.textContent = "\u25bc";
+  titleArt.textContent = title;
+  dateArt.textContent = date;
+  firstParaArt.textContent = firstParagraph;
+  secondParaArt.textContent = secondParagraph;
+  thirdParaArt.textContent = thirdParagraph;
+  spanArt.textContent = "\u25bc";
 
-  spanArticle.addEventListener("click", event => {
-    divArticle.classList.toggle("article-open");
+  spanArt.addEventListener("click", event => {
+    divArt.classList.toggle("article-open");
   })
 
-  return divArticle
+  return divArt
 }
 const articles = document.querySelector (".articles")
 data.forEach(data => {
