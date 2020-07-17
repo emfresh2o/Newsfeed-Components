@@ -104,6 +104,8 @@ const data = [
 ];
 
 function createArticle (title, date, firstParagraph, secondParagraph, thirdParagraph){
+
+// Defined New Elements
   const divArt = document.createElement("div");
   const titleArt = document.createElement("h2");
   const dateArt = document.createElement("p");
@@ -112,16 +114,18 @@ function createArticle (title, date, firstParagraph, secondParagraph, thirdParag
   const thirdParaArt = document.createElement("p");
   const spanArt =  document.createElement("span");
 
+// Applied classes 
+  divArt.classList.add("article");
+  dateArt.classList.add("date");
+  spanArt.classList.add("expandButton");
+
+// Nested elements using .append
   divArt.append(titleArt);
   divArt.append(dateArt);
   divArt.append(firstParaArt);
   divArt.append(secondParaArt);
   divArt.append(thirdParaArt);
   divArt.append(spanArt);
-
-  divArt.classList.add("article");
-  dateArt.classList.add("date");
-  spanArt.classList.add("expandButton");
 
   titleArt.textContent = title;
   dateArt.textContent = date;
@@ -136,6 +140,7 @@ function createArticle (title, date, firstParagraph, secondParagraph, thirdParag
 
   return divArt
 }
+// Created new DOM element and append it
 const articles = document.querySelector (".articles")
 data.forEach(data => {
   articles.append(createArticle(data.title, data.date, data.firstParagraph, data.secondParagraph, data.thirdParagraph))
