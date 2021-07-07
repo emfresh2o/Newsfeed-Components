@@ -85,8 +85,67 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'The Process of Learning - "New Article"',
+    date: 'July 14th, 2020',
+    firstParagraph: `Be stubborn about your goals and flexible about your methods!  Be stubborn about your goals and flexible about your methods!Be stubborn about your goals and flexible about your methods!Be stubborn about your goals and flexible about your methods!
+    Be stubborn about your goals and flexible about your methods!Be stubborn about your goals and flexible about your methods!Be stubborn about your goals and flexible about your methods!Be stubborn about your goals and flexible about your methods!
+    Be stubborn about your goals and flexible about your methods!Be stubborn about your goals and flexible about your methods!Be stubborn about your goals and flexible about your methods!`,
+
+    secondParagraph: `Tell me and I forget, teach me and I remember, Involve me and I learn!Tell me and I forget, teach me and I remember, Involve me and I learn!Tell me and I forget, teach me and I remember, Involve me and I learn!
+    Tell me and I forget, teach me and I remember, Involve me and I learn!Tell me and I forget, teach me and I remember, Involve me and I learn!Tell me and I forget, teach me and I remember, Involve me and I learn!
+    Tell me and I forget, teach me and I remember, Involve me and I learn!Tell me and I forget, teach me and I remember, Involve me and I learn!`,
+
+    thirdParagraph: `Change is the end result of all true learning! Change is the end result of all true learning! Change is the end result of all true learning! Change is the end result of all true learning!
+    Change is the end result of all true learning!Change is the end result of all true learning!Change is the end result of all true learning!
+    Change is the end result of all true learning!Change is the end result of all true learning!`,
   }
 ];
+
+function createArticle (title, date, firstParagraph, secondParagraph, thirdParagraph){
+
+// Defined New Elements
+  const divArt = document.createElement("div");
+  const titleArt = document.createElement("h2");
+  const dateArt = document.createElement("p");
+  const firstParaArt = document.createElement("p");
+  const secondParaArt = document.createElement("p");
+  const thirdParaArt = document.createElement("p");
+  const spanArt =  document.createElement("span");
+
+// Applied classes 
+  divArt.classList.add("article");
+  dateArt.classList.add("date");
+  spanArt.classList.add("expandButton");
+
+// Nested elements using .append
+  divArt.append(titleArt);
+  divArt.append(dateArt);
+  divArt.append(firstParaArt);
+  divArt.append(secondParaArt);
+  divArt.append(thirdParaArt);
+  divArt.append(spanArt);
+
+  titleArt.textContent = title;
+  dateArt.textContent = date;
+  firstParaArt.textContent = firstParagraph;
+  secondParaArt.textContent = secondParagraph;
+  thirdParaArt.textContent = thirdParagraph;
+  spanArt.textContent = "\u25bc";
+
+  spanArt.addEventListener("click", event => {
+    divArt.classList.toggle("article-open");
+  })
+
+  return divArt
+}
+// Created new DOM element and append it
+const articles = document.querySelector (".articles")
+data.forEach(data => {
+  articles.append(createArticle(data.title, data.date, data.firstParagraph, data.secondParagraph, data.thirdParagraph))
+  console.log(data)
+})
 
 /* Step 1: Write a component called 'articleMaker' to create an article. You want your component to return markup like the template below: 
 
